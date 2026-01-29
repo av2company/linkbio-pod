@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilderson Correia Advocacia</title>
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+    --preto:#12302e;
+    --cinza-escuro:#12302e;
+    --creme:#ffffff;
+    --dourado:#c49c59;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:radial-gradient(circle at top, var(--cinza-escuro) 0%, var(--preto) 60%);
+    color:var(--creme);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:32px 16px;
+}
+
+.wrapper{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    animation:fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(16px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* LOGO */
+.logo img{
+    width:200px; /* antes: 140px */
+    margin-bottom:20px;
+    filter:drop-shadow(0 0 12px rgba(196,156,89,0.25));
+    transition:0.4s ease;
+}
+
+.logo img:hover{
+    transform:scale(1.03);
+}
+
+/* TITULO */
+.title{
+    font-family:'Sora', sans-serif;
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:6px;
+    letter-spacing:0.4px;
+}
+
+/* SUBTITULO */
+.subtitle{
+    font-size:14px;
+    color:rgba(255,255,255,0.85);
+    margin-bottom:18px;
+}
+
+/* ICONES */
+.quick-icons{
+    display:flex;
+    justify-content:center;
+    gap:26px;
+    margin-bottom:36px;
+}
+
+.quick-icons a{
+    color:var(--dourado);
+    font-size:22px;
+    transition:0.3s ease;
+}
+
+.quick-icons a:hover{
+    transform:translateY(-4px) scale(1.1);
+    filter:drop-shadow(0 0 10px rgba(196,156,89,0.6));
+}
+
+/* LINKS */
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-bottom:36px;
+}
+
+.links a{
+    text-decoration:none;
+    color:var(--creme);
+    background:rgba(18,48,46,0.9);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(196,156,89,0.3);
+    border-radius:14px;
+    padding:15px 18px;
+    font-size:15px;
+    font-weight:500;
+    display:grid;
+    grid-template-columns:22px 1fr 22px;
+    align-items:center;
+    transition:0.35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.links a::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg, transparent, rgba(196,156,89,0.25), transparent);
+    transform:translateX(-100%);
+    transition:0.6s ease;
+}
+
+.links a:hover::before{
+    transform:translateX(100%);
+}
+
+.links a i{
+    font-size:17px;
+    color:var(--dourado);
+    transition:0.3s ease;
+}
+
+.links a span{
+    justify-self:center;
+}
+
+.links a:hover{
+    background:var(--dourado);
+    color:var(--preto);
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(196,156,89,0.35);
+}
+
+.links a:hover i{
+    color:var(--preto);
+}
+
+/* CTA */
+.cta a{
+    display:inline-block;
+    font-size:15px;
+    font-weight:600;
+    color:var(--dourado);
+    text-decoration:none;
+    position:relative;
+}
+
+.cta a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:0;
+    height:2px;
+    background:var(--dourado);
+    transition:0.3s ease;
+}
+
+.cta a:hover::after{
+    width:100%;
+}
+
+/* FOOTER */
+footer{
+    margin-top:40px;
+    font-size:11px;
+    color:rgba(255,255,255,0.55);
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="logo">
+        <img src="LOGO_POD01.png" alt="Gilderson Correia Advogados">
+    </div>
+
+    <div class="title">Conversando Direito</div>
+    <div class="subtitle">LiveCast com conteúdo jurídico informativo e institucional</div>
+
+    <div class="quick-icons">
+        <a href="https://wa.me/5581995401444" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/advogadogilderson/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@advogadogildersoncorreia" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="https://www.twitch.tv/advogadogilderson" target="_blank">
+            <i class="fab fa-twitch"></i>
+            <span>Conversando Direito na Twitch</span>
+            <span></span>
+        </a>
+
+        <a href="https://open.spotify.com/user/31zoj72k44vij5w4dfmtjyrrnmky" target="_blank">
+            <i class="fab fa-spotify"></i>
+            <span>Conversando Direito no Spotify</span>
+            <span></span>
+        </a>
+
+        <a href="https://www.instagram.com/podconversandodireito/" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>Conversando Direito no Instagram</span>
+            <span></span>
+        </a>
+
+        <a href="https://www.youtube.com/@podconversandodireito" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <span>Conversando Direito no YouTube</span>
+            <span></span>
+        </a>
+    </div>
+
+    <div class="cta">
+        <a href="https://wa.me/5581995401444" target="_blank">
+            Conecte-se ao nosso LiveCast jurídico
+        </a>
+    </div>
+
+    <footer>
+        © 2026 Conversando Direito LiveCast | Desenvolvido por AV2COMPANY
+    </footer>
+
+</div>
+
+</body>
+</html>
